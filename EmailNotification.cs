@@ -17,7 +17,7 @@ namespace inheritance_project
 
         public override void Transport()
         {
-            Console.WriteLine($"{Body},{Subject},{Recipient},{SmtpProvider}");
+            Console.WriteLine($"{Subject},{Body},{Recipient},{SmtpProvider}");
         }
     }
 }
