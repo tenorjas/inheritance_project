@@ -6,7 +6,11 @@ namespace inheritance_project
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var email = new EmailNotification("Hey, how are you?","Hi","Korri","gmail");
+            email.Transport();
+
+            var text = new TextNotification("I just got home, resting up","At home","Dad","AT&T");
+            text.Transport();
         }
     }
 }

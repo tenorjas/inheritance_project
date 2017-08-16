@@ -6,14 +6,18 @@ namespace inheritance_project
     {
         public string Recipient {get; set;}
         public string SmsProvider {get; set;}
-        
-        public TextNotification(string body, string subject) : base(body, subject)
+
+        public TextNotification(string body, string subject, string recipient, string smsProvider) : base(body, subject)
         {
+            this.Body = body;
+            this.Subject = subject;
+            this.Recipient = recipient;
+            this.SmsProvider = smsProvider;
         }
 
         public override void Transport()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Body},{Subject},{Recipient},{SmsProvider}");
         }
     }
 }
